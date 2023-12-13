@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String isian_nama_depan = edNamaDepan.getText().toString();
                 String isian_nama_belakang = edNamaBelakang.getText().toString();
 
-                if(isian_nama_depan.isEmpty()){
+                if (isian_nama_depan.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Isian masih kosong", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang);
                     daftar_nama.clear();
                     daftar_nama.add(nama_lengkap);
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent_list);
                 }
             }
-        });
-    }
-}
+            });
+        }
+    };
+
+
